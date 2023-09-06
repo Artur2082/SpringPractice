@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component("cartBean")
 @Scope("prototype")
 public class Cart {
-    private ProductRepository productRepository;
+    private final ProductRepository productRepository;
 
     @Autowired
     public Cart(ProductRepository productRepository) {

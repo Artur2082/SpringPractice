@@ -1,5 +1,6 @@
 package ua.javaPro;
 
+
 public class Product {
     private Integer id;
     private String name;
@@ -19,9 +20,6 @@ public class Product {
         return name;
     }
 
-    public double getPrice() {
-        return price;
-    }
 
     @Override
     public String toString() {

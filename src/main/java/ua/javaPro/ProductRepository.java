@@ -8,7 +8,7 @@ import java.util.List;
 
 @Component
 public class ProductRepository {
-    private List<Product> productList;
+    private final List<Product> productList;
 
     public ProductRepository() {
         this.productList = new ArrayList<>();
