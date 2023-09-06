@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 
 @Component("cartBean")
-@Scope("prototype")
+@Scope("singleton")
 public class Cart {
     private final ProductRepository productRepository;
 
