@@ -16,7 +16,7 @@ public class ProductRepository {
 
     public List<Product> getProductList() {
         return productList;
-    }
+    } 
 
     public List<Product> getAll() {
         return productList;
