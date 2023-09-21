@@ -14,7 +14,7 @@ import java.time.LocalDate;
 @Component
 @Aspect
 @Order(1)
-public class LoggingAspect {
+public class BeforeAspects {
 //    @Pointcut("execution(* aop.UniLibrary.*(..))")
 //    private void allMethodsFromUnilibrary() {
 //    }
@@ -62,7 +62,7 @@ public class LoggingAspect {
     // get*(..) -  (..) - любое количество параметров, любых типов;
     // getBook(aop.Book) - метод с названием getBook, (aop.Book) - расположение параметра обьекта Book;
     // (* *(..)) - любой возвращаемый тип метода, любое название метода, любое количество параметров, любых типов;
-    @Before("aop.aspects.MyPointcuts.pointcutAdd()")
+    @Before("aop.aspects.MyPointcuts.pointcutGet()")
     public void beforeAddLoggingAdvice(JoinPoint joinPoint){
         MethodSignature methodSignature = (MethodSignature) joinPoint.getSignature();
         System.out.println("methodSignature : "
@@ -86,7 +86,6 @@ public class LoggingAspect {
                 }
             }
         }
-
         LocalDate date = LocalDate.now();
         System.out.println("beforeAddLoggingAdvice - logging of try to add book/magazine at : " + date);
         System.out.println("__________________________________");
